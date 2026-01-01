@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Way - Curso de Inglês Cíclico</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .bg-gradient-soft { background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); }
+        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="text-slate-800 bg-white">
+
+    <!-- Header / Nav -->
+    <nav class="fixed w-full z-50 glass border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="font-bold text-2xl tracking-tighter text-blue-700">THE WAY</div>
+                <div class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#metodo" class="hover:text-blue-600 transition">Metodologia</a>
+                    <a href="#formato" class="hover:text-blue-600 transition">Formato</a>
+                    <a href="#faq" class="hover:text-blue-600 transition">Dúvidas</a>
+                </div>
+                <a href="#vendas" class="bg-blue-600 text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition">Matricule-se Agora</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-16 px-4 bg-gradient-soft">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="bg-blue-100 text-blue-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">Início Imediato em qualquer data</span>
+            <h1 class="mt-6 text-4xl md:text-6xl font-bold text-slate-900 leading-tight">O caminho cíclico para a sua fluência definitiva.</h1>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed">
+                Aprenda inglês de forma consistente e gradual, com a flexibilidade de 5 horários ao vivo por dia e uma metodologia que se adapta ao seu ritmo.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#vendas" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:shadow-lg hover:bg-blue-700 transition">Quero começar agora</a>
+                <a href="#formato" class="bg-white border border-slate-300 text-slate-700 px-8 py-4 rounded-xl font-bold text-lg hover:bg-slate-50 transition">Ver horários</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre o Curso -->
+    <section class="py-20 px-4 max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-slate-900">O que é o Inglês Cíclico?</h2>
+                <p class="mt-6 text-slate-600 leading-relaxed italic text-lg">"O aprendizado se adapta à sua vida, não o contrário."</p>
+                <p class="mt-4 text-slate-600 leading-relaxed">
+                    No modelo cíclico, os alunos podem ingressar em qualquer momento e avançar após completar a carga horária. Se perder uma aula, você pode repor no mesmo dia ou assistir à gravação. O conhecimento funciona como uma espiral ascendente: você sempre avança.
+                </p>
+                <div class="mt-8 grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-slate-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="block font-bold text-slate-900">100% Online</span>
+                        <span class="text-sm text-slate-500">Aulas ao vivo via Zoom/Meet</span>
+                    </div>
+                    <div class="p-4 bg-slate-50 rounded-lg border-l-4 border-blue-500">
+                        <span class="block font-bold text-slate-900">Garantia Total</span>
+                        <span class="text-sm text-slate-500">Reembolso após 5 aulas</span>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue-50 p-8 rounded-3xl border border-blue-100">
+                <h3 class="text-xl font-bold mb-6">Estrutura do Curso</h3>
+                <ul class="space-y-4">
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Duração:</strong> 10 a 12 meses para fluência funcional.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <svg class="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span><strong>Frequência:</strong> Segunda a Quinta-feira.</span>
+                    </li>
+                    <li id="formato" class="flex items-start">
+                        <svg class="w-6 h-6 text-blue-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <div>
+                            <strong>5 Opções de Horários (Aula ao vivo):</strong>
+                            <div class="flex flex-wrap gap-2 mt-2">
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-mono tracking-wider italic">07h</span>
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-mono tracking-wider italic">12h</span>
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-mono tracking-wider italic">18h</span>
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-mono tracking-wider italic">20h</span>
+                                <span class="bg-blue-600 text-white px-3 py-1 rounded text-sm font-mono tracking-wider italic">21h</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Metodologia -->
+    <section id="metodo" class="py-20 bg-slate-900 text-white px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">Metodologia Lexis English Academy</h2>
+                <p class="text-slate-400 mt-4">Técnicas aceleradas para aprendizado dinâmico e eficaz.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Cards Metodologia -->
+                <div class="p-6 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <h3 class="text-blue-400 font-bold text-lg mb-3 italic tracking-tighter">Aula Invertida</h3>
+                    <p class="text-sm text-slate-300">Estude previamente para aproveitar 100% do tempo de aula com prática.</p>
+                </div>
+                <div class="p-6 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <h3 class="text-blue-400 font-bold text-lg mb-3 italic tracking-tighter">Repetição Espaçada</h3>
+                    <p class="text-sm text-slate-300">Facilita a memorização e retenção de longo prazo com o suporte do Memrise.</p>
+                </div>
+                <div class="p-6 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <h3 class="text-blue-400 font-bold text-lg mb-3 italic tracking-tighter">Gamificação</h3>
+                    <p class="text-sm text-slate-300">Aprendizado envolvente e motivador através de desafios e metas.</p>
+                </div>
+                <div class="p-6 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <h3 class="text-blue-400 font-bold text-lg mb-3 italic tracking-tighter">IA & WhatsApp</h3>
+                    <p class="text-sm text-slate-300">Treine conversação 24h com a IA Gab English Teacher pelo WhatsApp.</p>
+                </div>
+                <div class="p-6 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <h3 class="text-blue-400 font-bold text-lg mb-3 italic tracking-tighter">Instrução por Pares</h3>
+                    <p class="text-sm text-slate-300">Troca de conhecimentos e colaboração real entre os alunos.</p>
+                </div>
+                <div class="p-6 border border-slate-700 rounded-2xl hover:border-blue-500 transition">
+                    <h3 class="text-blue-400 font-bold text-lg mb-3 italic tracking-tighter">Ensino Híbrido</h3>
+                    <p class="text-sm text-slate-300">O melhor das práticas digitais com a interação humana ao vivo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conteúdo Programático -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12 italic tracking-tighter">Jornada The Way</h2>
+            <div class="space-y-4">
+                <div class="flex items-center p-6 bg-slate-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-6 shrink-0">01</div>
+                    <div>
+                        <h4 class="font-bold text-lg">START (Fonética)</h4>
+                        <p class="text-slate-600 text-sm italic tracking-tighter font-semibold">Correção de vícios fonéticos e introdução a phrasal verbs.</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-6 bg-slate-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-6 shrink-0">02</div>
+                    <div>
+                        <h4 class="font-bold text-lg">RUN (Estruturas)</h4>
+                        <p class="text-slate-600 text-sm italic tracking-tighter font-semibold">Domínio intensivo de estruturas gramaticais simples e complexas.</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-6 bg-slate-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-6 shrink-0">03</div>
+                    <div>
+                        <h4 class="font-bold text-lg">FLY (Vocabulário)</h4>
+                        <p class="text-slate-600 text-sm italic tracking-tighter font-semibold">As 600-700 palavras mais usadas no cotidiano.</p>
+                    </div>
+                </div>
+                <div class="flex items-center p-6 bg-slate-50 rounded-2xl">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold mr-6 shrink-0">04</div>
+                    <div>
+                        <h4 class="font-bold text-lg">LIBERTY (Conversação)</h4>
+                        <p class="text-slate-600 text-sm italic tracking-tighter font-semibold">Fluência e compreensão auditiva acima de 70%.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Long Sales Copy Section -->
+    <section id="vendas" class="py-20 px-4 bg-blue-50 border-y border-blue-100">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-sm font-bold text-blue-600 uppercase tracking-widest text-center mb-4 italic tracking-tighter">A Jornada da Fluência</h2>
+            <h3 class="text-3xl md:text-4xl font-bold text-slate-900 text-center mb-8">Cansado de tentar aprender inglês e só encontrar frustração?</h3>
+            
+            <div class="prose prose-slate lg:prose-lg max-w-none text-slate-700 leading-relaxed space-y-6">
+                <p>Se você chegou até aqui, é porque já sentiu o peso da frustração. Talvez você tenha investido tempo em cursos tradicionais com horários rígidos que não se encaixam na sua vida. Ou sentiu a culpa corroendo sua motivação ao perder uma aula.</p>
+                
+                <p class="font-semibold text-slate-900">A verdade é que seu cérebro FOI FEITO PARA APRENDER INGLÊS. Mas não do jeito que te ensinaram.</p>
+                
+                <p>The Way é o segredo cíclico que vai destrancar sua fluência. Imagine um caminho onde o aprendizado respeita sua vida. Se sua agenda mudar de repente, não se preocupe: você pode alternar entre os 5 horários do mesmo dia.</p>
+                
+                <p class="bg-white p-6 rounded-xl border border-blue-200 shadow-sm italic tracking-tighter font-semibold">"Nos cursos tradicionais, perder uma aula é um drama. Aqui, não. Você simplesmente participa de outra sessão ou assiste à gravação. O sistema garante que você só avançará quando cumprir a carga horária de assimilação."</p>
+                
+                <p>Com dedicação, você atingirá fluência funcional em 10 a 12 meses. E sua paz de espírito é nossa prioridade: <strong>se não se adaptar nas primeiras 5 aulas, devolvemos 100% do seu investimento.</strong> Sem burocracia.</p>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="#" class="inline-block bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:bg-green-700 transition shadow-lg hover:scale-105 transform">GARANTIR MINHA VAGA AGORA</a>
+                <p class="mt-4 text-sm text-slate-500 flex items-center justify-center">
+                    <svg class="w-4 h-4 mr-1 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"></path></svg>
+                    Pagamento 100% Seguro via Criptografia
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20 px-4 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-12 italic tracking-tighter">Perguntas Frequentes</h2>
+        <div class="space-y-4">
+            <!-- FAQ Item 1 -->
+            <details class="group bg-slate-50 rounded-xl p-4 border border-slate-200">
+                <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-slate-800 italic tracking-tighter">
+                    Posso alternar entre os horários das aulas ao vivo?
+                    <span class="transition group-open:rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 text-sm leading-relaxed">Sim, você pode participar das aulas ao vivo em qualquer um dos horários disponíveis (07h, 12h, 18h, 20h, 21h), garantindo total flexibilidade para sua rotina.</p>
+            </details>
+            
+            <!-- FAQ Item 2 -->
+            <details class="group bg-slate-50 rounded-xl p-4 border border-slate-200">
+                <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-slate-800 italic tracking-tighter">
+                    Como funciona o reembolso de 5 aulas?
+                    <span class="transition group-open:rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 text-sm leading-relaxed">Se após as primeiras 5 aulas você sentir que o curso não é para você, basta solicitar o reembolso integral. Sem perguntas, sem burocracia.</p>
+            </details>
+
+            <!-- FAQ Item 3 -->
+            <details class="group bg-slate-50 rounded-xl p-4 border border-slate-200">
+                <summary class="list-none flex justify-between items-center cursor-pointer font-bold text-slate-800 italic tracking-tighter">
+                    Preciso de conhecimento prévio?
+                    <span class="transition group-open:rotate-180">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"></path></svg>
+                    </span>
+                </summary>
+                <p class="mt-4 text-slate-600 text-sm leading-relaxed">Não! O curso é estruturado para atender desde iniciantes absolutos até estudantes avançados, graças ao modelo cíclico adaptativo.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- Objeções (Dropdown Compacto) -->
+    <section class="py-10 px-4 max-w-4xl mx-auto mb-20">
+        <details class="group border border-slate-200 rounded-2xl overflow-hidden">
+            <summary class="bg-slate-100 p-4 font-bold text-center cursor-pointer hover:bg-slate-200 transition italic tracking-tighter italic tracking-tighter">
+                Ainda tem dúvidas? Veja aqui 50 respostas sobre o curso.
+            </summary>
+            <div class="p-6 bg-white grid md:grid-cols-2 gap-4 text-xs">
+                <div>
+                    <p class="mb-2"><strong>"É muito caro."</strong><br>R: Menos de R$ 10 por aula ao vivo com todo suporte incluso.</p>
+                    <p class="mb-2"><strong>"Não tenho tempo."</strong><br>R: 5 horários ao vivo e aulas gravadas para ver quando quiser.</p>
+                    <p class="mb-2"><strong>"Não aprendo online."</strong><br>R: Metodologia ativa e interação humana real, diferente de cursos gravados.</p>
+                    <p class="mb-2"><strong>"O curso é longo."</strong><br>R: Fluência funcional em 12 meses é um dos prazos mais rápidos e realistas do mercado.</p>
+                </div>
+                <div>
+                    <p class="mb-2"><strong>"Tenho bloqueio."</strong><br>R: Nosso módulo START é focado justamente em destravar a fonética e a confiança.</p>
+                    <p class="mb-2"><strong>"E se eu viajar?"</strong><br>R: Acesso total de qualquer lugar do mundo pelo celular ou notebook.</p>
+                    <p class="mb-2"><strong>"Tem certificado?"</strong><br>R: Sim, certificado de conclusão com carga horária e nível alcançado.</p>
+                    <p class="mb-2"><strong>"Formas de pagamento?"</strong><br>R: Cartão, Boleto e PIX em até 12x.</p>
+                </div>
+                <div class="col-span-2 text-center text-slate-400 py-4 italic">As 50 objeções são respondidas em nosso suporte dedicado após a matrícula.</div>
+            </div>
+        </details>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-12 px-4 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter mb-4 md:mb-0">THE WAY</div>
+            <div class="text-slate-400 text-sm text-center md:text-right italic tracking-tighter">
+                &copy; 2024 Lexis English Academy. Todos os direitos reservados.<br>
+                Plataformas Integradas: Memrise, Teaches, ChatClass e Gab English Teacher.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
