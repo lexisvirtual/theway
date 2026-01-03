@@ -4,346 +4,302 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Way | O Método Cíclico para Fluência em Inglês</title>
+    <meta name="description" content="Fluência real em 10 a 12 meses. Conheça o método cíclico da Lexis Academy.">
+    
+    <!-- Favicon (Raio Dourado) -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
+
+    <!-- Tailwind CSS (CDN) -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Fontes Premium: Manrope (Títulos) e Inter (Corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Configuração da Identidade Visual Lexis -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Manrope', 'sans-serif'],
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Manrope', 'sans-serif'],
                     },
                     colors: {
-                        primary: '#0f172a',    // Fundo principal / Hero
-                        soft: '#f59e0b33',     // Fundos suaves
-                        secondary: '#94a3b8',  // Texto secundário
-                        action: '#fbd24c',     // CTAs (Amarelo Ouro)
-                        divider: '#798c8c',    // Divisores / Ícones neutros
-                        highlight: '#8c5414',  // Destaques de autoridade (Bronze)
+                        brand: {
+                            navy: '#283459',      /* Fundo Principal */
+                            dark: '#1b2440',      /* Fundo Secundário */
+                            bronze: '#936e11',    /* Destaques e Botões */
+                            gold: '#b08416',      /* Hover */
+                            gray: '#b4b4cc',      /* Texto Suave */
+                            white: '#ffffff',
+                        }
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(147, 110, 17, 0.3)',
                     }
                 }
             }
         }
     </script>
+
     <style>
         body { -webkit-font-smoothing: antialiased; }
-        .glass-effect {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(148, 163, 184, 0.1);
+        
+        /* Efeito de Vidro para Nav e Cards */
+        .glass-nav {
+            background: rgba(40, 52, 89, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
-        .text-gradient {
-            background: linear-gradient(to right, #fbd24c, #f59e0b);
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(180, 180, 204, 0.1);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Gradiente de Texto Dourado */
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #ffffff 0%, #936e11 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
-<body class="bg-primary text-slate-200 font-sans selection:bg-action selection:text-primary">
+<body class="bg-brand-navy text-brand-gray font-sans selection:bg-brand-bronze selection:text-white">
 
-    <!-- NAV (Simple) -->
-    <nav class="fixed w-full z-50 bg-brand-dark/95 backdrop-blur border-b border-brand-neutral/20">
+    <!-- NAV -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="text-2xl font-bold tracking-tighter text-white">
-                The <span class="text-brand-gold">Way</span>
-            </div>          
+            <a href="#" class="font-display text-2xl font-extrabold tracking-tight text-white hover:opacity-90 transition">
+                Lexis<span class="text-brand-bronze">Academy</span>
+            </a>
+            <div class="hidden md:flex gap-6 text-sm font-semibold">
+                <a href="#problema" class="hover:text-brand-bronze transition">O Problema</a>
+                <a href="#metodo" class="hover:text-brand-bronze transition">O Método</a>
+                <a href="#contato" class="text-white bg-brand-bronze px-5 py-2 rounded shadow-lg hover:bg-brand-gold transition transform hover:-translate-y-0.5">Falar com Consultor</a>
+            </div>
         </div>
     </nav>
 
     <!-- 1. HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center pt-20 pb-12 px-4 overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1e293b] to-primary z-0"></div>
-        <div class="absolute top-1/4 right-0 w-96 h-96 bg-soft rounded-full blur-[100px] opacity-40 pointer-events-none"></div>
-
+    <header class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
+        <!-- Background Effects -->
+        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#3a4b7c] via-brand-navy to-brand-navy z-0 opacity-40"></div>
+        
         <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-            <div class="inline-block px-4 py-1 rounded-full border border-highlight/50 bg-highlight/10 text-action text-xs font-bold uppercase tracking-widest mb-4">
+            <div class="inline-block px-4 py-1.5 rounded-full border border-brand-bronze/30 bg-brand-bronze/10 text-brand-bronze text-xs font-bold uppercase tracking-widest mb-4">
                 Método Exclusivo Lexis English Academy
             </div>
             
-            <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight">
+            <h1 class="font-display text-5xl md:text-7xl font-extrabold text-white leading-tight tracking-tight drop-shadow-lg">
                 Você não falhou. <br>
-                <span class="text-gradient">O método tradicional falhou com você.</span>
+                <span class="text-brand-bronze">O método tradicional falhou com você.</span>
             </h1>
             
-            <p class="text-xl text-secondary max-w-2xl mx-auto leading-relaxed">
-                Descubra o <strong>Sistema Cíclico</strong>: A única metodologia onde perder uma aula não significa ficar para trás. Fluência real em 10 a 12 meses, adaptada à sua rotina caótica.
+            <p class="text-xl text-brand-gray max-w-2xl mx-auto leading-relaxed">
+                Descubra o <strong>Sistema Cíclico</strong>: A única metodologia onde perder uma aula não significa ficar para trás. Fluência real em 10 a 12 meses, adaptada à sua rotina.
             </p>
 
-            <ul class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 text-secondary text-sm font-medium mt-6">
+            <ul class="flex flex-col md:flex-row justify-center gap-4 md:gap-8 text-white text-sm font-medium mt-8">
                 <li class="flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5 text-action" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    5 Horários de aula ao vivo por dia
+                    <span class="text-brand-bronze text-lg">✓</span> 5 Horários ao vivo/dia
                 </li>
                 <li class="flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5 text-action" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Início imediato (Qualquer data)
+                    <span class="text-brand-bronze text-lg">✓</span> Início Imediato
                 </li>
                 <li class="flex items-center justify-center gap-2">
-                    <svg class="w-5 h-5 text-action" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
-                    Garantia Blindada de Adaptação
+                    <span class="text-brand-bronze text-lg">✓</span> Garantia de Adaptação
                 </li>
             </ul>
 
-            <div class="pt-8">
-                <p class="mt-4 text-xs text-divider uppercase tracking-widest">Vagas limitadas por ciclo</p>
+            <div class="pt-10 flex justify-center gap-4">
+                <a href="#contato" class="bg-brand-bronze text-white px-8 py-4 rounded font-bold text-lg shadow-glow hover:bg-brand-gold transition transform hover:-translate-y-1">
+                    Quero Conhecer o The Way
+                </a>
             </div>
         </div>
     </header>
 
     <!-- 2. O PROBLEMA -->
-    <section class="py-24 bg-white text-primary relative">
+    <section id="problema" class="py-24 bg-white text-brand-navy relative">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6 leading-tight">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-6 leading-tight">
                 A "Culpa" de perder uma aula está destruindo sua chance de falar inglês.
             </h2>
-            <div class="w-20 h-1 bg-action mb-8"></div>
+            <div class="w-20 h-1.5 bg-brand-bronze mb-8 rounded"></div>
             
-            <p class="text-lg text-slate-600 mb-6 leading-relaxed">
-                Você já passou por isso: Matricula-se em um curso tradicional, empolgado. Na terceira semana, surge um imprevisto no trabalho. Você perde a aula de terça-feira.
+            <p class="text-lg text-slate-700 mb-6 leading-relaxed">
+                Você já passou por isso: Matricula-se em um curso tradicional, empolgado. Na terceira semana, surge um imprevisto no trabalho e você perde a aula.
             </p>
-            <p class="text-lg text-slate-600 mb-10 leading-relaxed">
-                Na quinta-feira, ao voltar, a turma já avançou. Você se sente perdido, "menos inteligente" que os outros e a vergonha te impede de perguntar. O resultado? <strong class="text-highlight">Frustração, dinheiro jogado fora e a sensação de que "inglês não é para mim".</strong>
+            <p class="text-lg text-slate-700 mb-12 leading-relaxed">
+                Na aula seguinte, a turma já avançou. Você se sente perdido e a vergonha te impede de perguntar. O resultado? <strong class="text-brand-bronze">Frustração e desistência.</strong>
             </p>
 
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 bg-slate-50 border border-slate-200 rounded-lg">
-                    <svg class="w-10 h-10 text-divider mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                    <h3 class="font-bold text-lg mb-2">Horários Rígidos</h3>
-                    <p class="text-sm text-slate-500">A vida adulta não cabe em tabelas fixas. Se sua rotina muda, você perde o curso.</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-slate-50 border border-slate-200 rounded-lg hover:shadow-lg transition">
+                    <h3 class="font-display font-bold text-xl mb-3 text-brand-navy">Horários Rígidos</h3>
+                    <p class="text-sm text-slate-600">A vida adulta não cabe em tabelas fixas. Se sua rotina muda, você perde o curso.</p>
                 </div>
-                <div class="p-6 bg-slate-50 border border-slate-200 rounded-lg">
-                    <svg class="w-10 h-10 text-divider mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                    <h3 class="font-bold text-lg mb-2">Efeito Bola de Neve</h3>
-                    <p class="text-sm text-slate-500">Perdeu um conteúdo? Ele fará falta lá na frente. O déficit se acumula até a desistência.</p>
+                <div class="p-8 bg-slate-50 border border-slate-200 rounded-lg hover:shadow-lg transition">
+                    <h3 class="font-display font-bold text-xl mb-3 text-brand-navy">Bola de Neve</h3>
+                    <p class="text-sm text-slate-600">Perdeu um conteúdo? O déficit se acumula até se tornar impossível acompanhar.</p>
                 </div>
-                <div class="p-6 bg-slate-50 border border-slate-200 rounded-lg">
-                    <svg class="w-10 h-10 text-divider mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"></path></svg>
-                    <h3 class="font-bold text-lg mb-2">Metodologia Passiva</h3>
-                    <p class="text-sm text-slate-500">Decorar regras gramaticais não faz ninguém falar em uma reunião de negócios ou viagem.</p>
+                <div class="p-8 bg-slate-50 border border-slate-200 rounded-lg hover:shadow-lg transition">
+                    <h3 class="font-display font-bold text-xl mb-3 text-brand-navy">Passividade</h3>
+                    <p class="text-sm text-slate-600">Decorar regras gramaticais não faz ninguém falar em uma reunião de negócios.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 3. A SOLUÇÃO (THE WAY) -->
-    <section class="py-24 bg-primary relative overflow-hidden">
-        <div class="absolute right-0 top-0 w-1/2 h-full bg-soft opacity-10 blur-3xl"></div>
+    <section id="metodo" class="py-24 bg-brand-dark relative overflow-hidden border-t border-brand-gray/10">
+        <!-- Glow effect -->
+        <div class="absolute right-0 top-0 w-1/2 h-full bg-brand-bronze opacity-5 blur-[120px]"></div>
         
         <div class="max-w-5xl mx-auto px-4 relative z-10">
             <div class="text-center mb-16">
-                <span class="text-action font-bold tracking-widest uppercase text-sm">A Revolução no Aprendizado</span>
-                <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-6">Conheça o Modelo Cíclico</h2>
-                <p class="text-secondary max-w-2xl mx-auto text-lg">
-                    Imagine uma espiral ascendente. Você entra em qualquer ponto, aprende, pratica e evolui. O sistema se adapta à sua vida, não o contrário.
+                <span class="text-brand-bronze font-bold tracking-widest uppercase text-sm">A Revolução no Aprendizado</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-3 mb-6 text-white">Conheça o Modelo Cíclico</h2>
+                <p class="text-brand-gray max-w-2xl mx-auto text-lg">
+                    Imagine uma espiral ascendente. Você entra em qualquer ponto, aprende, pratica e evolui. O sistema se adapta à sua vida.
                 </p>
             </div>
 
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="space-y-8">
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-action/10 flex items-center justify-center text-action font-bold text-xl">1</div>
+                <div class="space-y-10">
+                    <div class="flex gap-5">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-brand-bronze text-brand-bronze flex items-center justify-center font-bold text-xl shadow-[0_0_15px_rgba(147,110,17,0.2)]">1</div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Nunca perca conteúdo</h3>
-                            <p class="text-secondary">O modelo cíclico permite que você reveja e aprofunde temas. Se perder uma aula, você a recupera naturalmente no ciclo, sem "buracos" no aprendizado.</p>
+                            <h3 class="text-xl font-bold text-white mb-2 font-display">Nunca perca conteúdo</h3>
+                            <p class="text-brand-gray text-sm">O modelo cíclico permite que você reveja e aprofunde temas. Se perder uma aula, você a recupera naturalmente no ciclo.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-action/10 flex items-center justify-center text-action font-bold text-xl">2</div>
+                    <div class="flex gap-5">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-brand-bronze text-brand-bronze flex items-center justify-center font-bold text-xl shadow-[0_0_15px_rgba(147,110,17,0.2)]">2</div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Avanço por Competência</h3>
-                            <p class="text-secondary">Você só muda de nível quando completa a carga horária e domina o conteúdo. Seu ritmo é respeitado, garantindo base sólida.</p>
+                            <h3 class="text-xl font-bold text-white mb-2 font-display">Avanço por Competência</h3>
+                            <p class="text-brand-gray text-sm">Você só muda de nível quando domina o conteúdo. Seu ritmo é respeitado, garantindo base sólida.</p>
                         </div>
                     </div>
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-full bg-action/10 flex items-center justify-center text-action font-bold text-xl">3</div>
+                    <div class="flex gap-5">
+                        <div class="flex-shrink-0 w-12 h-12 rounded-full border border-brand-bronze text-brand-bronze flex items-center justify-center font-bold text-xl shadow-[0_0_15px_rgba(147,110,17,0.2)]">3</div>
                         <div>
-                            <h3 class="text-xl font-bold text-white mb-2">Aulas 100% Ao Vivo</h3>
-                            <p class="text-secondary">Interação real com professores e colegas. Nada de aulas gravadas chatas como base do curso. Aqui a prática é constante.</p>
+                            <h3 class="text-xl font-bold text-white mb-2 font-display">Aulas 100% Ao Vivo</h3>
+                            <p class="text-brand-gray text-sm">Interação real com professores e colegas. Nada de aulas gravadas chatas como base do curso.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="p-8 border border-divider/20 rounded-2xl bg-white/5 backdrop-blur-sm">
-                    <h4 class="text-highlight font-bold uppercase tracking-widest mb-6 text-sm">Flexibilidade Extrema</h4>
-                    <p class="text-white text-2xl font-bold mb-6">
+                <div class="p-8 rounded-2xl glass-card relative">
+                    <div class="absolute -top-3 -right-3 bg-brand-bronze text-white text-xs font-bold px-3 py-1 rounded">DESTAQUE</div>
+                    <h4 class="text-brand-bronze font-bold uppercase tracking-widest mb-6 text-sm">Flexibilidade Extrema</h4>
+                    <p class="text-white text-2xl font-bold mb-8 font-display">
                         5 Horários Todos os Dias.<br>
-                        Escolha e alterne quando quiser.
+                        Alterne quando quiser.
                     </p>
-                    <div class="space-y-3">
-                        <div class="flex items-center justify-between p-3 bg-primary/50 rounded border border-divider/30">
-                            <span class="text-secondary">Manhã</span>
-                            <span class="text-action font-bold">07:00</span>
+                    <div class="space-y-3 font-mono text-sm">
+                        <div class="flex items-center justify-between p-3 bg-brand-navy/60 rounded border border-brand-gray/10">
+                            <span class="text-brand-gray">Manhã</span>
+                            <span class="text-brand-bronze font-bold">07:00</span>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-primary/50 rounded border border-divider/30">
-                            <span class="text-secondary">Almoço</span>
-                            <span class="text-action font-bold">12:00</span>
+                        <div class="flex items-center justify-between p-3 bg-brand-navy/60 rounded border border-brand-gray/10">
+                            <span class="text-brand-gray">Almoço</span>
+                            <span class="text-brand-bronze font-bold">12:00</span>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-primary/50 rounded border border-divider/30">
-                            <span class="text-secondary">Noite 1</span>
-                            <span class="text-action font-bold">18:00</span>
+                        <div class="flex items-center justify-between p-3 bg-brand-navy/60 rounded border border-brand-gray/10">
+                            <span class="text-brand-gray">Noite 1</span>
+                            <span class="text-brand-bronze font-bold">18:00</span>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-primary/50 rounded border border-divider/30">
-                            <span class="text-secondary">Noite 2</span>
-                            <span class="text-action font-bold">20:00</span>
+                        <div class="flex items-center justify-between p-3 bg-brand-navy/60 rounded border border-brand-gray/10">
+                            <span class="text-brand-gray">Noite 2</span>
+                            <span class="text-brand-bronze font-bold">20:00</span>
                         </div>
-                        <div class="flex items-center justify-between p-3 bg-primary/50 rounded border border-divider/30">
-                            <span class="text-secondary">Noite 3</span>
-                            <span class="text-action font-bold">21:00</span>
+                        <div class="flex items-center justify-between p-3 bg-brand-navy/60 rounded border border-brand-gray/10">
+                            <span class="text-brand-gray">Noite 3</span>
+                            <span class="text-brand-bronze font-bold">21:00</span>
                         </div>
-                    </div>
-                    <p class="mt-4 text-xs text-secondary text-center">*Conteúdo idêntico em todas as sessões do dia.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. POR QUE ESCOLHER (Autoridade) -->
-    <section class="py-20 bg-slate-50 text-primary">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-16">Mais do que um curso, um <span class="text-highlight">Ecossistema de Fluência</span></h2>
-
-            <div class="grid md:grid-cols-4 gap-6">
-                <!-- Card 1 -->
-                <div class="bg-white p-6 rounded shadow-sm border-t-4 border-action hover:shadow-lg transition-shadow">
-                    <h3 class="font-bold text-lg mb-3">Metodologia Ativa</h3>
-                    <p class="text-sm text-slate-600">Aula Invertida, Gamificação e Repetição Espaçada. Você estuda antes e PRATICA na aula.</p>
-                </div>
-                <!-- Card 2 -->
-                <div class="bg-white p-6 rounded shadow-sm border-t-4 border-action hover:shadow-lg transition-shadow">
-                    <h3 class="font-bold text-lg mb-3">Tecnologia Integrada</h3>
-                    <p class="text-sm text-slate-600">Plataforma Teaches, Memrise, ChatClass e IA para treino de conversação via WhatsApp.</p>
-                </div>
-                <!-- Card 3 -->
-                <div class="bg-white p-6 rounded shadow-sm border-t-4 border-action hover:shadow-lg transition-shadow">
-                    <h3 class="font-bold text-lg mb-3">Garantia Risco Zero</h3>
-                    <p class="text-sm text-slate-600">Não se adaptou nas primeiras 5 aulas? Devolvemos 100% do seu investimento. Sem burocracia.</p>
-                </div>
-                <!-- Card 4 -->
-                <div class="bg-white p-6 rounded shadow-sm border-t-4 border-action hover:shadow-lg transition-shadow">
-                    <h3 class="font-bold text-lg mb-3">Certificação Real</h3>
-                    <p class="text-sm text-slate-600">Ao final de 10-12 meses, receba um certificado comprovando sua carga horária e nível.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 5. COMO FUNCIONA (Passo a Passo) -->
-    <section class="py-24 bg-primary border-t border-divider/10">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-white text-center mb-12">O Caminho para a Liberdade (The Way)</h2>
-            
-            <div class="space-y-4">
-                <!-- Step 1 -->
-                <div class="flex flex-col md:flex-row gap-6 p-6 border border-divider/20 rounded hover:bg-white/5 transition-colors">
-                    <div class="text-action font-bold text-2xl md:w-32">01. START</div>
-                    <div>
-                        <h3 class="text-white text-xl font-bold mb-2">Fonética & Base</h3>
-                        <p class="text-secondary">Correção de vícios fonéticos e introdução a phrasal verbs. Preparamos seu aparelho auditivo e vocal para o inglês real.</p>
-                    </div>
-                </div>
-                <!-- Step 2 -->
-                <div class="flex flex-col md:flex-row gap-6 p-6 border border-divider/20 rounded hover:bg-white/5 transition-colors">
-                    <div class="text-action font-bold text-2xl md:w-32">02. RUN</div>
-                    <div>
-                        <h3 class="text-white text-xl font-bold mb-2">Estruturas</h3>
-                        <p class="text-secondary">Domínio intensivo da gramática aplicada (simples e complexa). Aqui você para de traduzir mentalmente e começa a construir frases.</p>
-                    </div>
-                </div>
-                <!-- Step 3 -->
-                <div class="flex flex-col md:flex-row gap-6 p-6 border border-divider/20 rounded hover:bg-white/5 transition-colors">
-                    <div class="text-action font-bold text-2xl md:w-32">03. FLY</div>
-                    <div>
-                        <h3 class="text-white text-xl font-bold mb-2">Vocabulário Estratégico</h3>
-                        <p class="text-secondary">Foco nas 600-700 palavras mais usadas no cotidiano. Expansão rápida para entender e ser entendido na maioria das situações.</p>
-                    </div>
-                </div>
-                <!-- Step 4 -->
-                <div class="flex flex-col md:flex-row gap-6 p-6 border border-divider/20 rounded hover:bg-white/5 transition-colors">
-                    <div class="text-action font-bold text-2xl md:w-32">04. LIBERTY</div>
-                    <div>
-                        <h3 class="text-white text-xl font-bold mb-2">Conversação Fluente</h3>
-                        <p class="text-secondary">Desenvolvimento de fluência e compreensão auditiva acima de 70%. Você pronto para o mercado de trabalho e viagens.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 7. PARA QUEM É -->
-    <section class="py-20 bg-slate-50 text-primary">
-        <div class="max-w-5xl mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center mb-12">The Way é para você?</h2>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- SIM -->
-                <div class="bg-white p-8 rounded-lg shadow-lg border-l-8 border-green-500">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-                        <span class="text-green-500 text-2xl">✓</span> Sim, se você:
-                    </h3>
-                    <ul class="space-y-4 text-slate-600">
-                        <li>• Precisa de inglês para ascensão profissional rápida.</li>
-                        <li>• Tem rotina instável e não consegue seguir horários fixos.</li>
-                        <li>• Já tentou outros cursos e se frustrou com a rigidez.</li>
-                        <li>• Busca aprendizado estruturado do básico ao avançado.</li>
-                    </ul>
-                </div>
-
-                <!-- NÃO -->
-                <div class="bg-white p-8 rounded-lg shadow-sm opacity-70 border-l-8 border-red-400 grayscale hover:grayscale-0 transition-all">
-                    <h3 class="text-xl font-bold mb-6 flex items-center gap-2">
-                        <span class="text-red-400 text-2xl">✕</span> Não é para você, se:
-                    </h3>
-                    <ul class="space-y-4 text-slate-600">
-                        <li>• Procura "fórmulas mágicas" sem dedicação.</li>
-                        <li>• Não pode dedicar 1 hora por dia (segunda a quinta).</li>
-                        <li>• Prefere métodos passivos onde só o professor fala.</li>
-                        <li>• Não está disposto a interagir em aulas ao vivo.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 8. CTA FINAL -->
-    <section id="cta" class="py-24 bg-primary relative">
-        <div class="max-w-3xl mx-auto px-4 text-center relative z-10">
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">
+    <!-- 4. CTA FINAL (COM FORMULÁRIO WHATSAPP) -->
+    <section id="contato" class="py-24 bg-gradient-to-b from-brand-navy to-[#0f131f] relative">
+        <div class="max-w-xl mx-auto px-4 text-center relative z-10">
+            <h2 class="font-display text-4xl font-extrabold text-white mb-4">
                 Pare de adiar o seu futuro.
             </h2>
-            <p class="text-xl text-secondary mb-10">
-                A oportunidade de dominar o inglês com total flexibilidade e garantia de aprendizado está a um clique de distância. Não deixe outro ano passar em branco.
+            <p class="text-lg text-brand-gray mb-10">
+                Fale com um especialista para receber o diagnóstico do seu nível e entender como o The Way se encaixa na sua rotina.
             </p>
 
-            <div class="bg-white/5 p-8 rounded-2xl border border-divider/20 backdrop-blur-sm mb-10">
-                <p class="text-white font-bold mb-2">O que você recebe ao agendar sua consultoria:</p>
-                <ul class="text-secondary text-sm space-y-2 mb-6">
-                    <li>✓ Análise de perfil e nível de inglês</li>
-                    <li>✓ Detalhes completos sobre valores e planos</li>
-                    <li>✓ Explicação personalizada da metodologia cíclica</li>
-                </ul>
+            <div class="bg-white/5 p-8 rounded-2xl border border-brand-bronze/30 backdrop-blur-sm shadow-2xl">
+                <form onsubmit="enviarParaWhatsApp(event)" class="space-y-4 text-left">
+                    <div>
+                        <input id="nome" type="text" placeholder="Nome Completo" required class="w-full p-4 rounded bg-brand-navy/80 border border-brand-gray/20 text-white placeholder-brand-gray/50 focus:outline-none focus:border-brand-bronze transition">
+                    </div>
+                    <div>
+                        <input id="email" type="email" placeholder="E-mail" required class="w-full p-4 rounded bg-brand-navy/80 border border-brand-gray/20 text-white placeholder-brand-gray/50 focus:outline-none focus:border-brand-bronze transition">
+                    </div>
+                    <div>
+                        <select id="horario" class="w-full p-4 rounded bg-brand-navy/80 border border-brand-gray/20 text-white focus:outline-none focus:border-brand-bronze transition">
+                            <option value="" disabled selected>Qual seu melhor horário para estudar?</option>
+                            <option value="Manhã (07h)">Manhã (07h)</option>
+                            <option value="Almoço (12h)">Almoço (12h)</option>
+                            <option value="Noite (18h-21h)">Noite (18h - 21h)</option>
+                            <option value="Variável">Minha rotina varia muito</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-bronze text-white font-bold uppercase tracking-wider p-4 rounded hover:bg-brand-gold transition shadow-glow transform hover:-translate-y-1">
+                        Solicitar Contato do Especialista
+                    </button>
+                </form>
                 
-                <p class="mt-4 text-xs text-divider">Resposta rápida. Sem compromisso financeiro imediato.</p>
-            </div>
-            
-            <div class="flex items-center justify-center gap-2 text-divider text-sm">
-                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
-                Garantia de Adaptação de 5 Dias Inclusa
+                <p class="mt-6 text-xs text-brand-gray opacity-60 flex justify-center items-center gap-2">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+                    Seus dados estão 100% seguros.
+                </p>
             </div>
         </div>
     </section>
 
     <!-- RODAPÉ -->
-    <footer class="bg-[#0b1120] text-divider py-12 border-t border-divider/10">
+    <footer class="bg-[#0b1120] text-brand-gray py-12 border-t border-brand-gray/10">
         <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-lg font-bold text-white tracking-tighter">THE WAY <span class="text-xs font-normal text-divider block">by Lexis English Academy</span></div>
+            <div class="text-xl font-bold text-white tracking-tighter font-display">Lexis<span class="text-brand-bronze">Academy</span></div>
             
-            <div class="text-sm text-center md:text-right">
+            <div class="text-sm text-center md:text-right opacity-80">
                 <p>&copy; 2026 Lexis English Academy. Todos os direitos reservados.</p>
-                <p class="mt-2 text-xs opacity-60">Metodologia exclusiva de ensino cíclico.</p>
+                <p class="mt-1 text-xs">CNPJ: 38.229.678/0001-13 • São Carlos, SP</p>
             </div>
         </div>
     </footer>
+
+    <!-- SCRIPT FORM WHATSAPP -->
+    <script>
+        function enviarParaWhatsApp(event) {
+            event.preventDefault();
+            const nome = document.getElementById('nome').value;
+            const email = document.getElementById('email').value;
+            const horario = document.getElementById('horario').value;
+            
+            // Número da Lexis
+            const numeroWhatsApp = "5516994051552"; 
+            
+            const mensagem = `Olá! Vim pelo site The Way.%0A%0A*Nome:* ${nome}%0A*E-mail:* ${email}%0A*Prefiro estudar:* ${horario}%0A%0AGostaria de saber mais sobre o método cíclico.`;
+            
+            window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');
+        }
+    </script>
+
+    <!-- SCRIPT CHAT AO VIVO (Lado Direito) -->
+    <!-- Configure a posição "Right" no painel do WTBotBuilder -->
+    <script type="text/javascript" src="https://app.wtbotbuilder.com/script/webchat-link.js?code=1766778328220161"></script>
 
 </body>
 </html>
