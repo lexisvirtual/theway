@@ -300,17 +300,18 @@ Seus dados estão seguros.
 </div>
 </footer>
 <script>
-function enviarTheWay(event) {
+const WHATSAPP_NUMBERS = ['5516994051552', '5516981770678', '5516981422525'];
+        function enviarTheWay(event) {
 event.preventDefault();
 const nome = document.getElementById('nome').value;
 const email = document.getElementById('email').value;
 const whatsapp = document.getElementById('whatsapp').value;
 const horario = document.getElementById('horario_pref').value;
-const numeroLexis = "5516994051552";
+const randomIndex = Math.floor(Math.random() * WHATSAPP_NUMBERS.length);
+        const numeroConsultor = WHATSAPP_NUMBERS[randomIndex];
 const mensagem = `Olá! Tenho interesse no *The Way (Inglês Cíclico)*.%0A%0A*Nome:* ${nome}%0A*Email:* ${email}%0A*Whats:* ${whatsapp}%0A*Prefiro estudar:* ${horario}%0A%0AGostaria de saber valores e como me matricular.`;
-window.open(`https://wa.me/${numeroLexis}?text=${mensagem}`, '_blank');
+window.open(`https://wa.me/${numeroConsultor}?text=${mensagem}`, '_blank');
 }
 </script>
-<script type="text/javascript" src="https://app.wtbotbuilder.com/script/webchat-link.js?code=1766778328220161"></script>
 </body>
 </html>
