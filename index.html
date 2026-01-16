@@ -1,398 +1,316 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Way | O Curso de Inglês Cíclico e Flexível</title>
-    <meta name="description" content="Aprenda inglês sem parar sua vida. 5 horários ao vivo por dia, início imediato e metodologia cíclica. Fluência em 10 a 12 meses.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Fontes -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Manrope:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Configuração Visual -->
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        display: ['Manrope', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            base: '#0f172a',      /* Fundo Principal */
-                            card: '#1e293b',      /* Fundo Secundário */
-                            yellow: '#fbd24c',    /* Ação / Destaque */
-                            white: '#f8fafc',     /* Títulos */
-                            text: '#94a3b8',      /* Texto Leitura */
-                        }
-                    },
-                    boxShadow: {
-                        'glow': '0 0 25px rgba(251, 210, 76, 0.2)',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body { -webkit-font-smoothing: antialiased; }
-        
-        .glass {
-            background: rgba(30, 41, 59, 0.7);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .text-gradient {
-            background: linear-gradient(135deg, #fbd24c 0%, #ffffff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Checkbox personalizado para lista */
-        .check-list li {
-            position: relative;
-            padding-left: 25px;
-            margin-bottom: 10px;
-        }
-        .check-list li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #fbd24c;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Way | Lexis English Academy</title>
+<meta name="description" content="Inglês é uma habilidade. Treine como um atleta. O único curso cíclico que se adapta à sua rotina com 5 horários ao vivo por dia.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+fontFamily: {
+sans: ['Inter', 'sans-serif'],
+display: ['Poppins', 'sans-serif'],
+},
+colors: {
+lexis: {
+dark: '#1a2332',
+darker: '#0f1419',
+gold: '#d4a845',
+goldlight: '#e6c56a',
+}
+}
+}
+}
+}
+</script>
+<style>
+body {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+.text-gradient-gold {
+background: linear-gradient(135deg, #d4a845 0%, #f5d97e 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+}
+.btn-gold {
+background: linear-gradient(135deg, #d4a845 0%, #c49835 100%);
+transition: all 0.3s ease;
+}
+.btn-gold:hover {
+transform: translateY(-2px);
+box-shadow: 0 10px 25px rgba(212, 168, 69, 0.3);
+}
+</style>
 </head>
-<body class="bg-brand-base text-brand-text font-sans selection:bg-brand-yellow selection:text-brand-base">
-
-    <!-- NAV -->
-    <nav class="fixed w-full z-50 glass transition-all duration-300 border-b border-white/5">
-        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="index.html" class="font-display text-2xl font-extrabold tracking-tight text-brand-white hover:opacity-90 transition">
-                Lexis<span class="text-brand-yellow">Academy</span> <span class="text-xs font-light text-brand-text opacity-70 ml-2 border-l border-white/20 pl-2">THE WAY</span>
-            </a>
-            <div class="hidden md:flex gap-6 text-sm font-semibold items-center">
-                <a href="#metodo" class="hover:text-brand-yellow transition">O Método Cíclico</a>
-                <a href="#horarios" class="hover:text-brand-yellow transition">Horários</a>
-                <a href="#modulos" class="hover:text-brand-yellow transition">Módulos</a>
-                <a href="#contato" class="text-brand-base bg-brand-yellow px-6 py-2.5 rounded font-bold shadow-glow hover:bg-white transition transform hover:-translate-y-0.5">Matrícula Imediata</a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
-        <!-- Background -->
-        <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#1e293b] via-brand-base to-brand-base z-0"></div>
-        
-        <div class="relative z-10 max-w-4xl mx-auto text-center space-y-8">
-            <div class="inline-block px-4 py-1.5 rounded-full border border-brand-yellow/30 bg-brand-yellow/10 text-brand-yellow text-xs font-bold uppercase tracking-widest mb-4">
-                Início Imediato em Qualquer Data do Ano
-            </div>
-            
-            <h1 class="font-display text-4xl md:text-6xl font-extrabold text-brand-white leading-tight tracking-tight">
-                O único curso onde perder uma aula <br>
-                <span class="text-gradient">não significa ficar para trás.</span>
-            </h1>
-            
-            <p class="text-xl text-brand-text max-w-2xl mx-auto leading-relaxed">
-                Conheça o <strong>The Way</strong>: A abordagem cíclica que se adapta à sua rotina caótica. 5 horários ao vivo por dia, flexibilidade total e fluência em 10 a 12 meses.
-            </p>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm font-semibold text-brand-white mt-8 max-w-3xl mx-auto">
-                <div class="bg-brand-card border border-white/5 p-3 rounded flex items-center justify-center gap-2">
-                    <span class="text-brand-yellow">⚡</span> 100% Online
-                </div>
-                <div class="bg-brand-card border border-white/5 p-3 rounded flex items-center justify-center gap-2">
-                    <span class="text-brand-yellow">⚡</span> 5 Horários/Dia
-                </div>
-                <div class="bg-brand-card border border-white/5 p-3 rounded flex items-center justify-center gap-2">
-                    <span class="text-brand-yellow">⚡</span> Seg a Qui
-                </div>
-                <div class="bg-brand-card border border-white/5 p-3 rounded flex items-center justify-center gap-2">
-                    <span class="text-brand-yellow">⚡</span> Ao Vivo
-                </div>
-            </div>
-
-            <div class="pt-8">
-                <a href="#contato" class="bg-brand-yellow text-brand-base px-8 py-4 rounded font-bold text-lg shadow-glow hover:bg-white transition transform hover:-translate-y-1 inline-block">
-                    Quero Flexibilidade Total
-                </a>
-                <p class="mt-4 text-xs text-brand-text opacity-60">Garantia de Adaptação: Reembolso nas 5 primeiras aulas.</p>
-            </div>
-        </div>
-    </header>
-
-    <!-- O PROBLEMA (Agitação) -->
-    <section class="py-20 bg-white text-brand-base">
-        <div class="max-w-4xl mx-auto px-4">
-            <h2 class="font-display text-3xl font-bold mb-8 text-center">Por que o modelo tradicional falha com você?</h2>
-            
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <p class="text-lg text-slate-700 mb-6">
-                        Você se matricula empolgado. Na terceira semana, surge uma reunião de última hora e você perde a aula de terça. 
-                    </p>
-                    <p class="text-lg text-slate-700 mb-6">
-                        Na quinta, a turma já avançou. Você se sente perdido. O "buraco" no aprendizado vira uma bola de neve. A frustração bate e você desiste.
-                    </p>
-                    <p class="font-bold text-slate-900 border-l-4 border-brand-yellow pl-4">
-                        A vida adulta não cabe em tabelas fixas. Você precisa de um sistema que entenda seus imprevistos.
-                    </p>
-                </div>
-                <div class="bg-slate-100 p-8 rounded-xl border border-slate-200">
-                    <h3 class="font-bold text-xl mb-4">O ciclo da frustração tradicional:</h3>
-                    <ul class="space-y-3 text-slate-600">
-                        <li class="flex items-center gap-3"><span class="text-red-500">✖</span> Perdeu aula = Perdeu conteúdo</li>
-                        <li class="flex items-center gap-3"><span class="text-red-500">✖</span> Turma avança sem você</li>
-                        <li class="flex items-center gap-3"><span class="text-red-500">✖</span> Sensação de estar "atrasado"</li>
-                        <li class="flex items-center gap-3"><span class="text-red-500">✖</span> Horários rígidos que engessam</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- A SOLUÇÃO (METODOLOGIA CÍCLICA) -->
-    <section id="metodo" class="py-24 bg-brand-base relative overflow-hidden">
-        <!-- Background Elements -->
-        <div class="absolute right-0 top-0 w-1/3 h-full bg-brand-yellow opacity-5 blur-[100px]"></div>
-
-        <div class="max-w-6xl mx-auto px-4 relative z-10">
-            <div class="text-center mb-16">
-                <span class="text-brand-yellow font-bold tracking-widest uppercase text-sm">O Segredo do The Way</span>
-                <h2 class="font-display text-4xl font-bold text-brand-white mt-2">A Metodologia Cíclica</h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1">
-                    <div class="space-y-8">
-                        <div class="flex gap-4">
-                            <div class="bg-brand-card p-3 rounded-lg border border-white/10 h-fit">
-                                <span class="text-2xl">🔄</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-brand-white mb-2">Entre a qualquer momento</h3>
-                                <p class="text-brand-text">Não existe "turma fechada". Você entra no ciclo atual e aprende. Ao completar a carga horária e dominar o conteúdo, você avança.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="bg-brand-card p-3 rounded-lg border border-white/10 h-fit">
-                                <span class="text-2xl">🛡️</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-brand-white mb-2">Blindagem contra faltas</h3>
-                                <p class="text-brand-text">Perdeu uma aula? O sistema cíclico garante que você revisitará os temas essenciais. Você nunca fica com "buracos" no conhecimento.</p>
-                            </div>
-                        </div>
-                        <div class="flex gap-4">
-                            <div class="bg-brand-card p-3 rounded-lg border border-white/10 h-fit">
-                                <span class="text-2xl">🚀</span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-brand-white mb-2">Avanço por Competência</h3>
-                                <p class="text-brand-text">Você não passa de nível "porque o ano acabou". Você passa quando está pronto. Isso garante base sólida.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="order-1 md:order-2 bg-gradient-to-br from-brand-card to-brand-base border border-brand-yellow/20 p-8 rounded-2xl relative">
-                    <div class="absolute -top-4 -right-4 bg-brand-yellow text-brand-base font-bold px-4 py-1 rounded shadow-lg uppercase text-xs">Liberdade Total</div>
-                    <h3 class="font-display text-2xl font-bold text-brand-white mb-6">Sua Nova Rotina</h3>
-                    <p class="text-brand-text mb-6">
-                        Acordou cedo? Faça a aula das <strong>07h</strong>.<br>
-                        Imprevisto no trabalho? Faça às <strong>21h</strong>.<br>
-                        Conteúdo idêntico, liberdade total.
-                    </p>
-                    <div class="grid grid-cols-5 gap-2 text-center text-sm font-mono text-brand-white">
-                        <div class="bg-white/5 p-2 rounded border border-white/10 hover:border-brand-yellow hover:text-brand-yellow transition cursor-default">07h</div>
-                        <div class="bg-white/5 p-2 rounded border border-white/10 hover:border-brand-yellow hover:text-brand-yellow transition cursor-default">12h</div>
-                        <div class="bg-white/5 p-2 rounded border border-white/10 hover:border-brand-yellow hover:text-brand-yellow transition cursor-default">18h</div>
-                        <div class="bg-white/5 p-2 rounded border border-white/10 hover:border-brand-yellow hover:text-brand-yellow transition cursor-default">20h</div>
-                        <div class="bg-white/5 p-2 rounded border border-white/10 hover:border-brand-yellow hover:text-brand-yellow transition cursor-default">21h</div>
-                    </div>
-                    <p class="text-xs text-center mt-4 text-brand-text opacity-60">Horários de Brasília • Segunda a Quinta</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- OS 4 PILARES (CONTEÚDO) -->
-    <section id="modulos" class="py-24 bg-brand-card border-y border-white/5">
-        <div class="max-w-6xl mx-auto px-4">
-            <h2 class="font-display text-3xl md:text-4xl font-bold text-center text-brand-white mb-16">
-                O que você vai dominar (The 4 Pillars)
-            </h2>
-
-            <div class="grid md:grid-cols-4 gap-6">
-                <!-- Start -->
-                <div class="bg-brand-base p-6 rounded-xl border border-white/5 hover:border-brand-yellow transition group">
-                    <div class="text-brand-yellow text-4xl font-display font-bold mb-4 opacity-50 group-hover:opacity-100">01</div>
-                    <h3 class="text-xl font-bold text-brand-white mb-2">START</h3>
-                    <p class="text-sm font-bold text-brand-yellow mb-4 uppercase tracking-wider">Fonética</p>
-                    <p class="text-sm text-brand-text">Correção de vícios de pronúncia e introdução aos phrasal verbs. A base para ser entendido.</p>
-                </div>
-
-                <!-- Run -->
-                <div class="bg-brand-base p-6 rounded-xl border border-white/5 hover:border-brand-yellow transition group">
-                    <div class="text-brand-yellow text-4xl font-display font-bold mb-4 opacity-50 group-hover:opacity-100">02</div>
-                    <h3 class="text-xl font-bold text-brand-white mb-2">RUN</h3>
-                    <p class="text-sm font-bold text-brand-yellow mb-4 uppercase tracking-wider">Estruturas</p>
-                    <p class="text-sm text-brand-text">Domínio da gramática prática (presente, passado, futuro) sem decoreba. Construção de frases complexas.</p>
-                </div>
-
-                <!-- Fly -->
-                <div class="bg-brand-base p-6 rounded-xl border border-white/5 hover:border-brand-yellow transition group">
-                    <div class="text-brand-yellow text-4xl font-display font-bold mb-4 opacity-50 group-hover:opacity-100">03</div>
-                    <h3 class="text-xl font-bold text-brand-white mb-2">FLY</h3>
-                    <p class="text-sm font-bold text-brand-yellow mb-4 uppercase tracking-wider">Vocabulário</p>
-                    <p class="text-sm text-brand-text">Foco nas 700 palavras mais usadas no cotidiano e business. Collocations e expressões idiomáticas.</p>
-                </div>
-
-                <!-- Liberty -->
-                <div class="bg-brand-base p-6 rounded-xl border border-white/5 hover:border-brand-yellow transition group">
-                    <div class="text-brand-yellow text-4xl font-display font-bold mb-4 opacity-50 group-hover:opacity-100">04</div>
-                    <h3 class="text-xl font-bold text-brand-white mb-2">LIBERTY</h3>
-                    <p class="text-sm font-bold text-brand-yellow mb-4 uppercase tracking-wider">Conversação</p>
-                    <p class="text-sm text-brand-text">Fluência oral e compreensão auditiva superior a 70% em contextos reais.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PLATAFORMA & GARANTIA -->
-    <section class="py-20 bg-brand-base">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="font-display text-3xl font-bold text-brand-white mb-12">Ecossistema de Aprendizado</h2>
-            
-            <div class="flex flex-wrap justify-center gap-4 md:gap-8 mb-16 opacity-80">
-                <div class="glass px-6 py-3 rounded-full text-brand-white font-semibold">🖥️ Plataforma Teaches</div>
-                <div class="glass px-6 py-3 rounded-full text-brand-white font-semibold">🧠 Memrise (Vocabulário)</div>
-                <div class="glass px-6 py-3 rounded-full text-brand-white font-semibold">💬 ChatClass (WhatsApp)</div>
-                <div class="glass px-6 py-3 rounded-full text-brand-white font-semibold">🎥 Aulas Gravadas</div>
-            </div>
-
-            <div class="bg-gradient-to-r from-brand-card to-brand-base border border-brand-yellow p-8 rounded-2xl relative">
-                <div class="text-4xl mb-4">🔒</div>
-                <h3 class="text-2xl font-bold text-brand-white mb-4">Garantia de Adaptação (Risco Zero)</h3>
-                <p class="text-brand-text max-w-2xl mx-auto mb-6">
-                    Sabemos que o método funciona, mas queremos que você se sinta seguro. Se não se adaptar após as <strong>primeiras 5 aulas ao vivo</strong>, você terá o reembolso total do valor investido.
-                </p>
-                <p class="text-sm text-brand-yellow font-bold uppercase tracking-widest">Sem perguntas, sem burocracia.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ RÁPIDO -->
-    <section class="py-20 bg-brand-card border-t border-white/5">
-        <div class="max-w-3xl mx-auto px-4">
-            <h2 class="font-display text-2xl font-bold text-brand-white text-center mb-10">Perguntas Frequentes</h2>
-            
-            <div class="space-y-6">
-                <div class="border-b border-white/10 pb-6">
-                    <h3 class="text-brand-white font-bold mb-2">Posso alternar entre os horários?</h3>
-                    <p class="text-brand-text text-sm">Sim! Você tem total liberdade. Se hoje fizer às 07h, amanhã pode fazer às 20h. O conteúdo é sincronizado.</p>
-                </div>
-                <div class="border-b border-white/10 pb-6">
-                    <h3 class="text-brand-white font-bold mb-2">E se eu viajar a trabalho?</h3>
-                    <p class="text-brand-text text-sm">O curso é 100% online. Você pode acessar pelo celular, tablet ou computador de qualquer lugar do mundo.</p>
-                </div>
-                <div class="border-b border-white/10 pb-6">
-                    <h3 class="text-brand-white font-bold mb-2">Preciso saber inglês para começar?</h3>
-                    <p class="text-brand-text text-sm">Não. O curso atende desde o nível básico (Start) até avançado. Você será alocado no ciclo correto para o seu nível.</p>
-                </div>
-                <div class="border-b border-white/10 pb-6">
-                    <h3 class="text-brand-white font-bold mb-2">Quanto tempo dura o curso?</h3>
-                    <p class="text-brand-text text-sm">A média para atingir a fluência funcional é de 10 a 12 meses, seguindo o ritmo proposto de aulas e exercícios.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA FINAL (FORMULÁRIO) -->
-    <section id="contato" class="py-24 bg-gradient-to-b from-brand-base to-[#020617]">
-        <div class="max-w-xl mx-auto px-4 text-center">
-            <h2 class="font-display text-4xl font-extrabold text-brand-white mb-4">
-                Comece seu ciclo hoje.
-            </h2>
-            <p class="text-lg text-brand-text mb-10">
-                Preencha para receber a grade curricular completa e valores promocionais.
-            </p>
-
-            <div class="bg-white/5 p-8 rounded-2xl border border-brand-yellow/30 backdrop-blur-sm shadow-[0_0_40px_rgba(251,210,76,0.1)]">
-                <form onsubmit="enviarTheWay(event)" class="space-y-4 text-left">
-                    <div>
-                        <input id="nome" type="text" placeholder="Nome Completo" required class="w-full p-4 rounded bg-brand-base/80 border border-slate-700 text-brand-white placeholder-slate-500 focus:outline-none focus:border-brand-yellow transition">
-                    </div>
-                    <div>
-                        <input id="email" type="email" placeholder="E-mail" required class="w-full p-4 rounded bg-brand-base/80 border border-slate-700 text-brand-white placeholder-slate-500 focus:outline-none focus:border-brand-yellow transition">
-                    </div>
-                    <div>
-                        <input id="whatsapp" type="tel" placeholder="WhatsApp com DDD" required class="w-full p-4 rounded bg-brand-base/80 border border-slate-700 text-brand-white placeholder-slate-500 focus:outline-none focus:border-brand-yellow transition">
-                    </div>
-                    <div>
-                        <select id="horario_pref" class="w-full p-4 rounded bg-brand-base/80 border border-slate-700 text-brand-white focus:outline-none focus:border-brand-yellow transition">
-                            <option value="" disabled selected>Horário preferido de estudo?</option>
-                            <option value="Manhã (07h)">Manhã (07h)</option>
-                            <option value="Almoço (12h)">Almoço (12h)</option>
-                            <option value="Noite (18h-21h)">Noite (18h-21h)</option>
-                            <option value="Flexível">Vou variar os horários</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="w-full bg-brand-yellow text-brand-base font-bold uppercase tracking-wider p-4 rounded hover:bg-white transition shadow-glow transform hover:-translate-y-1">
-                        Solicitar Contato Especialista
-                    </button>
-                </form>
-                
-                <p class="mt-6 text-xs text-brand-text opacity-60 flex justify-center items-center gap-2">
-                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
-                    Seus dados estão seguros.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="bg-[#020617] text-brand-text py-12 border-t border-slate-800">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-xl font-bold text-brand-white tracking-tighter font-display">Lexis<span class="text-brand-yellow">Academy</span></div>
-            <div class="text-sm text-center md:text-right opacity-80">
-                <p>&copy; 2026 Lexis English Academy. Todos os direitos reservados.</p>
-                <p class="mt-1 text-xs">Curso: The Way - Inglês Cíclico</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- SCRIPTS -->
-    <script>
-        function enviarTheWay(event) {
-            event.preventDefault();
-            const nome = document.getElementById('nome').value;
-            const email = document.getElementById('email').value;
-            const whatsapp = document.getElementById('whatsapp').value;
-            const horario = document.getElementById('horario_pref').value;
-            
-            const numeroLexis = "5516994051552"; 
-            
-            const mensagem = `Olá! Tenho interesse no *The Way (Inglês Cíclico)*.%0A%0A*Nome:* ${nome}%0A*Email:* ${email}%0A*Whats:* ${whatsapp}%0A*Prefiro estudar:* ${horario}%0A%0AGostaria de saber valores e como me matricular.`;
-            
-            window.open(`https://wa.me/${numeroLexis}?text=${mensagem}`, '_blank');
-        }
-    </script>
-    
-    <!-- Chat Widget -->
-    <script type="text/javascript" src="https://app.wtbotbuilder.com/script/webchat-link.js?code=1766778328220161"></script>
-
+<body class="bg-lexis-darker text-gray-300 font-sans">
+<nav class="fixed w-full bg-lexis-darker/95 backdrop-blur-md z-50 border-b border-white/10">
+<div class="max-w-7xl mx-auto px-6 py-5">
+<div class="flex items-center justify-between">
+<div class="font-display text-2xl font-bold tracking-tight">
+<span class="text-white">LEXIS ACADEMY</span>
+</div>
+<a href="#contato" class="btn-gold text-lexis-darker px-6 py-3 rounded-lg font-semibold text-sm">FALAR COM CONSULTOR</a>
+</div>
+</div>
+</nav>
+<section class="min-h-screen flex items-center justify-center pt-32 pb-20 px-6">
+<div class="max-w-6xl mx-auto text-center">
+<h1 class="font-display text-5xl md:text-7xl font-bold text-white leading-tight mb-8">
+Inglês é uma <span class="text-gradient-gold">habilidade</span>.<br>
+Treine como um atleta.
+</h1>
+<p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12">
+O único curso cíclico que se adapta à sua rotina. 5 horários ao vivo por dia, início imediato e fluência em 10-12 meses.
+</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+<a href="#contato" class="btn-gold text-lexis-darker px-8 py-4 rounded-lg font-bold text-lg">INICIAR IMEDIATAMENTE</a>
+<a href="#metodo" class="border-2 border-lexis-gold text-lexis-gold px-8 py-4 rounded-lg font-bold text-lg hover:bg-lexis-gold/10 transition">CONHECER O MÉTODO</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
+<div class="bg-lexis-dark/50 border border-white/10 p-4 rounded-lg">
+<div class="text-2xl mb-2">🔥</div>
+<div class="text-sm font-semibold text-white">5 Horários/Dia</div>
+</div>
+<div class="bg-lexis-dark/50 border border-white/10 p-4 rounded-lg">
+<div class="text-2xl mb-2">🔄</div>
+<div class="text-sm font-semibold text-white">Modelo Cíclico</div>
+</div>
+<div class="bg-lexis-dark/50 border border-white/10 p-4 rounded-lg">
+<div class="text-2xl mb-2">⚡</div>
+<div class="text-sm font-semibold text-white">Início Imediato</div>
+</div>
+<div class="bg-lexis-dark/50 border border-white/10 p-4 rounded-lg">
+<div class="text-2xl mb-2">🎯</div>
+<div class="text-sm font-semibold text-white">100% Online</div>
+</div>
+<div class="bg-lexis-dark/50 border border-white/10 p-4 rounded-lg">
+<div class="text-2xl mb-2">🛡️</div>
+<div class="text-sm font-semibold text-white">Garantia Total</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-white text-lexis-darker">
+<div class="max-w-6xl mx-auto px-6">
+<div class="max-w-3xl mx-auto">
+<h2 class="font-display text-4xl font-bold mb-8 text-center">Por que o modelo tradicional falha com você?</h2>
+<div class="space-y-6 text-lg text-gray-700">
+<p>Você se matricula empolgado. Na terceira semana, surge uma reunião de última hora e você perde a aula de terça.</p>
+<p>Na quinta, a turma já avançou. Você se sente perdido. O "buraco" no aprendizado vira uma bola de neve. A frustração bate e você desiste.</p>
+<div class="bg-gray-100 border-l-4 border-lexis-gold p-6 rounded">
+<p class="font-bold text-lexis-darker">A vida adulta não cabe em tabelas fixas. Você precisa de um sistema que entenda seus imprevistos.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="metodo" class="py-24 bg-lexis-dark text-white">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-display text-4xl md:text-5xl font-bold mb-4">A Metodologia <span class="text-gradient-gold">Cíclica</span></h2>
+<p class="text-xl text-gray-400 max-w-2xl mx-auto">O segredo do The Way: flexibilidade total sem perder evolução</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 mb-16">
+<div class="bg-lexis-darker border border-white/10 p-8 rounded-xl">
+<div class="text-4xl mb-4">🔄</div>
+<h3 class="text-2xl font-bold mb-4">Entre a Qualquer Momento</h3>
+<p class="text-gray-400">Não existe "turma fechada". Você entra no ciclo atual e aprende. Ao completar a carga horária e dominar o conteúdo, você avança.</p>
+</div>
+<div class="bg-lexis-darker border border-white/10 p-8 rounded-xl">
+<div class="text-4xl mb-4">🛡️</div>
+<h3 class="text-2xl font-bold mb-4">Blindagem Contra Faltas</h3>
+<p class="text-gray-400">Perdeu uma aula? O sistema cíclico garante que você revisitará os temas essenciais. Você nunca fica com "buracos" no conhecimento.</p>
+</div>
+<div class="bg-lexis-darker border border-white/10 p-8 rounded-xl">
+<div class="text-4xl mb-4">🚀</div>
+<h3 class="text-2xl font-bold mb-4">Avanço por Competência</h3>
+<p class="text-gray-400">Você não passa de nível "porque o ano acabou". Você passa quando está pronto. Isso garante base sólida.</p>
+</div>
+</div>
+<div class="bg-gradient-to-r from-lexis-gold/20 to-lexis-darker border border-lexis-gold p-8 rounded-xl">
+<h3 class="text-3xl font-bold mb-6">Sua Nova Rotina</h3>
+<div class="space-y-4 text-lg">
+<p>Acordou cedo? Faça a aula das <strong class="text-lexis-gold">07h</strong>.</p>
+<p>Imprevisto no trabalho? Faça às <strong class="text-lexis-gold">21h</strong>.</p>
+<p class="text-gray-400 italic">Conteúdo idêntico, liberdade total.</p>
+</div>
+<div class="grid grid-cols-5 gap-3 mt-8">
+<div class="bg-lexis-darker border border-lexis-gold p-4 rounded-lg text-center font-mono text-lexis-gold font-bold">07h</div>
+<div class="bg-lexis-darker border border-lexis-gold p-4 rounded-lg text-center font-mono text-lexis-gold font-bold">12h</div>
+<div class="bg-lexis-darker border border-lexis-gold p-4 rounded-lg text-center font-mono text-lexis-gold font-bold">18h</div>
+<div class="bg-lexis-darker border border-lexis-gold p-4 rounded-lg text-center font-mono text-lexis-gold font-bold">20h</div>
+<div class="bg-lexis-darker border border-lexis-gold p-4 rounded-lg text-center font-mono text-lexis-gold font-bold">21h</div>
+</div>
+<p class="text-sm text-gray-400 text-center mt-4">Horários de Brasília • Segunda a Quinta</p>
+</div>
+</section>
+<section class="py-24 bg-lexis-darker">
+<div class="max-w-7xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">O Caminho do Domínio</h2>
+<p class="text-xl text-gray-400 max-w-2xl mx-auto">4 pilares estruturados para garantir que você não apenas aprenda, mas automatize o idioma</p>
+</div>
+<div class="grid md:grid-cols-4 gap-6">
+<div class="bg-lexis-dark border border-white/10 p-8 rounded-xl hover:border-lexis-gold transition group">
+<div class="text-5xl font-bold text-lexis-gold/50 mb-4 group-hover:text-lexis-gold transition">01</div>
+<h3 class="text-2xl font-bold text-white mb-2">START</h3>
+<p class="text-sm font-semibold text-lexis-gold mb-4 uppercase tracking-wider">FONÉTICA</p>
+<p class="text-gray-400">Correção definitiva de vícios fonéticos e introdução aos Phrasal Verbs mais essenciais.</p>
+</div>
+<div class="bg-lexis-dark border border-white/10 p-8 rounded-xl hover:border-lexis-gold transition group">
+<div class="text-5xl font-bold text-lexis-gold/50 mb-4 group-hover:text-lexis-gold transition">02</div>
+<h3 class="text-2xl font-bold text-white mb-2">RUN</h3>
+<p class="text-sm font-semibold text-lexis-gold mb-4 uppercase tracking-wider">ESTRUTURAS</p>
+<p class="text-gray-400">Domínio intensivo de estruturas gramaticais das mais simples às mais complexas, sem decoreba.</p>
+</div>
+<div class="bg-lexis-dark border border-white/10 p-8 rounded-xl hover:border-lexis-gold transition group">
+<div class="text-5xl font-bold text-lexis-gold/50 mb-4 group-hover:text-lexis-gold transition">03</div>
+<h3 class="text-2xl font-bold text-white mb-2">FLY</h3>
+<p class="text-sm font-semibold text-lexis-gold mb-4 uppercase tracking-wider">VOCABULÁRIO</p>
+<p class="text-gray-400">Expansão estratégica com foco nas 600-700 palavras que compõem 80% do uso cotidiano.</p>
+</div>
+<div class="bg-lexis-dark border border-white/10 p-8 rounded-xl hover:border-lexis-gold transition group">
+<div class="text-5xl font-bold text-lexis-gold/50 mb-4 group-hover:text-lexis-gold transition">04</div>
+<h3 class="text-2xl font-bold text-white mb-2">LIBERTY</h3>
+<p class="text-sm font-semibold text-lexis-gold mb-4 uppercase tracking-wider">CONVERSAÇÃO</p>
+<p class="text-gray-400">O ápice: fluência funcional e compreensão auditiva acima de 70% em situações reais.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-20 bg-lexis-dark">
+<div class="max-w-6xl mx-auto px-6">
+<div class="text-center mb-16">
+<h2 class="font-display text-3xl font-bold text-white mb-4">Ferramentas de Apoio Inclusas</h2>
+<p class="text-gray-400">Ecossistema completo para acelerar seu aprendizado</p>
+</div>
+<div class="grid md:grid-cols-5 gap-4">
+<div class="bg-lexis-darker/50 border border-white/10 p-6 rounded-lg text-center">
+<div class="text-3xl mb-2">🖥️</div>
+<p class="text-white font-semibold mb-1">Plataforma Teaches</p>
+<p class="text-xs text-gray-500">Central de Conteúdos</p>
+</div>
+<div class="bg-lexis-darker/50 border border-white/10 p-6 rounded-lg text-center">
+<div class="text-3xl mb-2">🧠</div>
+<p class="text-white font-semibold mb-1">Memrise</p>
+<p class="text-xs text-gray-500">Repetição Espaçada</p>
+</div>
+<div class="bg-lexis-darker/50 border border-white/10 p-6 rounded-lg text-center">
+<div class="text-3xl mb-2">🤖</div>
+<p class="text-white font-semibold mb-1">Gab English IA</p>
+<p class="text-xs text-gray-500">Treino via WhatsApp</p>
+</div>
+<div class="bg-lexis-darker/50 border border-white/10 p-6 rounded-lg text-center">
+<div class="text-3xl mb-2">💬</div>
+<p class="text-white font-semibold mb-1">ChatClass</p>
+<p class="text-xs text-gray-500">Treinamento Diário</p>
+</div>
+<div class="bg-lexis-darker/50 border border-white/10 p-6 rounded-lg text-center">
+<div class="text-3xl mb-2">🎥</div>
+<p class="text-white font-semibold mb-1">Aulas Gravadas</p>
+<p class="text-xs text-gray-500">Revisão e Reposição</p>
+</div>
+</div>
+<div class="mt-16 bg-gradient-to-r from-lexis-darker to-lexis-dark border border-lexis-gold p-10 rounded-2xl text-center">
+<div class="text-5xl mb-4">🔒</div>
+<h3 class="text-3xl font-bold text-white mb-4">Garantia de Adaptação (Risco Zero)</h3>
+<p class="text-lg text-gray-300 max-w-2xl mx-auto mb-6">Sabemos que o método funciona, mas queremos que você se sinta seguro. Se não se adaptar após as <strong class="text-lexis-gold">primeiras 5 aulas ao vivo</strong>, você terá o reembolso total do valor investido.</p>
+<p class="text-sm text-lexis-gold font-bold uppercase tracking-wider">Sem perguntas, sem burocracia.</p>
+</div>
+</div>
+</section>
+<section class="py-20 bg-lexis-darker">
+<div class="max-w-4xl mx-auto px-6">
+<h2 class="font-display text-3xl font-bold text-white text-center mb-12">Perguntas Frequentes</h2>
+<div class="space-y-6">
+<div class="bg-lexis-dark border border-white/10 p-6 rounded-lg">
+<h3 class="text-white font-bold mb-2">Posso alternar entre os horários?</h3>
+<p class="text-gray-400 text-sm">Sim! Você tem total liberdade. Se hoje fizer às 07h, amanhã pode fazer às 20h. O conteúdo é sincronizado.</p>
+</div>
+<div class="bg-lexis-dark border border-white/10 p-6 rounded-lg">
+<h3 class="text-white font-bold mb-2">E se eu viajar a trabalho?</h3>
+<p class="text-gray-400 text-sm">O curso é 100% online. Você pode acessar pelo celular, tablet ou computador de qualquer lugar do mundo.</p>
+</div>
+<div class="bg-lexis-dark border border-white/10 p-6 rounded-lg">
+<h3 class="text-white font-bold mb-2">Preciso saber inglês para começar?</h3>
+<p class="text-gray-400 text-sm">Não. O curso atende desde o nível básico (Start) até avançado. Você será alocado no ciclo correto para o seu nível.</p>
+</div>
+<div class="bg-lexis-dark border border-white/10 p-6 rounded-lg">
+<h3 class="text-white font-bold mb-2">Quanto tempo dura o curso?</h3>
+<p class="text-gray-400 text-sm">A média para atingir a fluência funcional é de 10 a 12 meses, seguindo o ritmo proposto de aulas e exercícios.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="contato" class="py-24 bg-gradient-to-b from-lexis-dark to-lexis-darker">
+<div class="max-w-2xl mx-auto px-6">
+<div class="text-center mb-12">
+<h2 class="font-display text-4xl md:text-5xl font-bold text-white mb-4">Comece seu ciclo <span class="text-gradient-gold">hoje</span></h2>
+<p class="text-lg text-gray-400">Preencha para receber a grade curricular completa e valores promocionais</p>
+</div>
+<div class="bg-lexis-dark/50 border border-lexis-gold/30 p-8 md:p-10 rounded-2xl">
+<form onsubmit="enviarTheWay(event)" class="space-y-5">
+<div>
+<input id="nome" type="text" placeholder="Nome Completo" required class="w-full p-4 rounded-lg bg-lexis-darker border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-lexis-gold transition">
+</div>
+<div>
+<input id="email" type="email" placeholder="E-mail" required class="w-full p-4 rounded-lg bg-lexis-darker border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-lexis-gold transition">
+</div>
+<div>
+<input id="whatsapp" type="tel" placeholder="WhatsApp com DDD" required class="w-full p-4 rounded-lg bg-lexis-darker border border-gray-700 text-white placeholder-gray-500 focus:outline-none focus:border-lexis-gold transition">
+</div>
+<div>
+<select id="horario_pref" class="w-full p-4 rounded-lg bg-lexis-darker border border-gray-700 text-white focus:outline-none focus:border-lexis-gold transition">
+<option value="" disabled selected>Horário preferido de estudo?</option>
+<option value="Manhã (07h)">Manhã (07h)</option>
+<option value="Almoço (12h)">Almoço (12h)</option>
+<option value="Noite (18h-21h)">Noite (18h-21h)</option>
+<option value="Flexível">Vou variar os horários</option>
+</select>
+</div>
+<button type="submit" class="w-full btn-gold text-lexis-darker font-bold uppercase tracking-wider p-4 rounded-lg">Solicitar Contato Especialista</button>
+</form>
+<p class="mt-6 text-xs text-gray-500 text-center flex items-center justify-center gap-2">
+<svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"></path></svg>
+Seus dados estão seguros.
+</p>
+</div>
+</div>
+</section>
+<footer class="bg-lexis-darker border-t border-white/10 py-12">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="font-display text-2xl font-bold">
+<span class="text-white">LEXIS ACADEMY</span>
+</div>
+<div class="text-sm text-gray-400 text-center md:text-right">
+<p>© 2026 Lexis English Academy. Todos os direitos reservados.</p>
+<p class="mt-1 text-xs">Curso: The Way - Inglês Cíclico</p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+function enviarTheWay(event) {
+event.preventDefault();
+const nome = document.getElementById('nome').value;
+const email = document.getElementById('email').value;
+const whatsapp = document.getElementById('whatsapp').value;
+const horario = document.getElementById('horario_pref').value;
+const numeroLexis = "5516994051552";
+const mensagem = `Olá! Tenho interesse no *The Way (Inglês Cíclico)*.%0A%0A*Nome:* ${nome}%0A*Email:* ${email}%0A*Whats:* ${whatsapp}%0A*Prefiro estudar:* ${horario}%0A%0AGostaria de saber valores e como me matricular.`;
+window.open(`https://wa.me/${numeroLexis}?text=${mensagem}`, '_blank');
+}
+</script>
+<script type="text/javascript" src="https://app.wtbotbuilder.com/script/webchat-link.js?code=1766778328220161"></script>
 </body>
 </html>
